@@ -2,13 +2,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .container {
     min-height: 100vh;
+    max-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 .sidebar {
@@ -33,7 +35,6 @@ body {
 
 .side-icon {
     filter: invert(100%);
-    width: 20px;
     width: 25px;
 }
 
@@ -45,11 +46,118 @@ body {
     font-size: 25px;
     padding-top: 25px;
     padding-left: 25px;
+    color: white;
+}
+
+.dashboard:hover {
+    cursor: pointer;
 }
 
 .header {
     grid-column: 2;
-    background-color: green;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.right-header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 18px;
+    padding-top: 10px;
+    padding-right: 30px;
+}
+
+.right-header > div:hover, 
+.search-icon:hover,
+button:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.search-icon {
+    width: 22px;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 18px;
+    padding-left: 30px;
+    gap: 10px;
+}
+
+.search-input {
+    background-color: rgba(226,232,240);
+    border: none;
+    border-radius: 20px;
+    width: 460px;
+    height: 24px;
+    padding-left: 10px;
+}
+
+.bell-icon {
+    width: 24px;
+}
+
+.bottom-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding-left: 30px; 
+}
+
+.profile-pic-big:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+}
+
+.profile-text div:first-of-type {
+    font-size: 13px;
+}
+
+.profile-text div:last-of-type {
+    font-size: 24px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    padding-right: 30px;
+    padding-top: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(25, 146, 212);
+    color: white;
+    width: 75px;
+    height: 30px; 
 }
 
 .main {
@@ -59,7 +167,6 @@ body {
 }
 
 p, .dashboard, ul {
-    color: white;
     list-style: none;
     font-weight: 500;
 }
@@ -69,6 +176,7 @@ ul {
     flex-direction: column;
     gap: 20px;
     padding-left: 30px;
+    color: white;
 }
 
 li {
@@ -79,3 +187,11 @@ li {
     gap: 20px;
 
 }
+
+ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07); 
+}
+
