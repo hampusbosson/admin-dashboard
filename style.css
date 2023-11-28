@@ -58,6 +58,9 @@ body {
     background-color: white;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    position: relative;
+    box-shadow: 0px 2px 3px rgb(175, 175, 175);
+
 }
 
 .top-header {
@@ -163,7 +166,160 @@ button {
 .main {
     grid-column: 2;
     grid-row: 2;
-    background-color: goldenrod;
+    background-color: rgba(226,232,240,255);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.project-display {
+    padding-left: 20px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.projects, .announcements-heading, .trending-heading {
+    font-size: 20px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px; 
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    background-color: white;
+    border-radius: 10px; 
+    padding-top: 25px;
+    padding-left: 20px;
+    border-left: 12px solid rgb(115, 198, 243);
+    box-shadow: 0px 2px 3px rgb(175, 175, 175);
+}
+
+.box:hover {
+    transform: scale(1.04);
+}
+
+.box-heading:hover {
+    cursor: pointer;
+    text-decoration: underline;
+} 
+
+.box-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    padding-right: 20px;
+}
+
+.box-description {
+    font-weight: 100;
+}
+
+.box-icons-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 25px;
+    padding-bottom: 3px;
+}
+
+.project-icon {
+    width: 25px;
+}
+
+.box-icons-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-description {
+    font-size: 13px;
+}
+
+.right-display {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+.announcements, .trending {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement-box, .trending-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px; 
+    padding-left: 25px; 
+    box-shadow: 0px 2px 3px rgb(175, 175, 175);
+}
+
+.announcement-box .ann-text + .ann-text {
+    border-top: 1px solid #ccc; 
+    padding-top: 18px; 
+}
+
+.ann-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.small-heading {
+    font-size: 13px;
+}
+
+.small-heading:hover {
+    cursor: pointer; 
+    transform: scale(1.01);
+}
+
+.small-text {
+    font-size: 11px;
+    font-weight: 100;
+}
+
+.trending {
+    padding-top: 12px;
+}
+
+.trending-person {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    align-items: center;
+}
+
+.trending-person:hover {
+    cursor: pointer; 
+    transform: scale(1.03);
+}
+
+.person-name {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.person-description {
+    font-size: 12px; 
+    font-weight: 100;
 }
 
 p, .dashboard, ul {
